@@ -1,0 +1,129 @@
+{
+    "basics": {
+        "name": "Romain Felicianne",
+        "label": "Développeur Web & Concepteur Rédacteur Freelance",
+        "location": "Jardin, Medellín (Colombie) | Guadeloupe | France",
+        "email": "ton.email@example.com",
+        "linkedin": "https://www.linkedin.com/in/felicianne-romain",
+        "website": "",
+        "summary": "Je conçois et développe des interfaces web robustes, lisibles et bien structurées. Spécialisé en React (TypeScript, TanStack Query), j'interviens aussi sur WordPress, Python (Streamlit), Moodle, etc."
+    },
+    "languages": [
+        {
+            "language": "Français",
+            "fluency": "Natif"
+        },
+        {
+            "language": "Espagnol",
+            "fluency": "C1"
+        },
+        {
+            "language": "Anglais",
+            "fluency": "B1"
+        },
+        {
+            "language": "Allemand",
+            "fluency": "B1"
+        }
+    ],
+    "skills": [
+        {
+            "group": "Frontend",
+            "keywords": [
+                "React",
+                "TypeScript",
+                "TanStack Query",
+                "HTML5",
+                "CSS3",
+                "Tailwind",
+                "SCSS",
+                "ShadCN"
+            ]
+        },
+        {
+            "group": "Backoffice / Visualisation",
+            "keywords": [
+                "Streamlit",
+                "Shiny",
+                "Python"
+            ]
+        },
+        {
+            "group": "CMS & Contenu",
+            "keywords": [
+                "WordPress",
+                "Moodle",
+                "Rédaction SEO",
+                "Newsletter"
+            ]
+        }
+    ],
+    "work": [
+        {
+            "company": "Freelance",
+            "position": "Développeur Web & Concepteur Rédacteur",
+            "startDate": "2016-04",
+            "endDate": "Present",
+            "summary": "Conception, intégration et développement d'interfaces web sur mesure. +20 missions de développement, +10 missions de wording et contenu."
+        },
+        {
+            "company": "Coding Accelerator",
+            "position": "Mentor Technique",
+            "startDate": "2024-01",
+            "endDate": "Present",
+            "summary": "Accompagnement de développeurs en reconversion. Correction, validation, mentorat jusqu'à la première mission freelance."
+        },
+        {
+            "company": "Le Chemin de la Nature",
+            "position": "Développeur Front-End",
+            "startDate": "2019-01",
+            "endDate": "Present",
+            "summary": "Maintenance de la plateforme e-learning. Intégration WordPress/Moodle, CSS/JS, contenus pédagogiques."
+        },
+        {
+            "company": "SANE STANDARD",
+            "position": "Développeur WordPress",
+            "startDate": "2022-06",
+            "endDate": "2022-09",
+            "summary": "Site vitrine sur mesure : charte graphique, personnalisation, intégration."
+        },
+        {
+            "company": "Alliance Française Paris",
+            "position": "Développeur Intégrateur",
+            "startDate": "2018-12",
+            "endDate": "2019-12",
+            "summary": "MOOCs sur FUN-MOOC. Stack HTML/CSS/OpenEdX, adaptation pédagogique."
+        }
+    ],
+    "education": [
+        {
+            "institution": "OpenClassrooms",
+            "area": "Développement Web Junior",
+            "startDate": "2017-12",
+            "endDate": "2018-09",
+            "summary": "Formation axée front-end, projets encadrés, compétences : HTML, CSS, JS, PHP, Git, SEO."
+        },
+        {
+            "institution": "Autodidacte",
+            "area": "Formation continue",
+            "startDate": "2016-12",
+            "summary": "ReactJS, TypeScript, Streamlit, Shiny, Firebase, NextJS, etc."
+        },
+        {
+            "institution": "ATLA",
+            "area": "Management Artistique et Culturel",
+            "startDate": "2015-12",
+            "endDate": "2016-03",
+            "summary": "Gestion de projets culturels, communication, budgétisation, accompagnement."
+        }
+    ],
+    "additional": {
+        "interests": [
+            "UX design",
+            "pédagogie",
+            "projets culturels",
+            "mentorat"
+        ],
+        "lifestyle": "Travail à distance depuis la Colombie, la Guadeloupe ou ailleurs. Autonomie, rigueur et approche humaine."
+    }
+}
