@@ -1,35 +1,16 @@
-/* Reset basique */
+/* --- COULEURS / STRUCTURE CLASSIQUE --- */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
     background: #eff6ff;
-    /* Très léger bleu Radix pour un fond plus lumineux et lisible */
     color: #101825;
-    /* Bleu très foncé Radix pour le texte principal, offrant un meilleur contraste */
-}
-
-h1,
-h2,
-h3 {
-    margin: 0.5em 0;
 }
 
 a {
     color: #ff9a00;
-    /* Orange vif Radix pour les liens, couleur complémentaire */
-    text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* En-tête du CV */
+/* HEADER */
 .cv-header {
     background-color: #112746;
-    /* Bleu foncé Radix pour l'en-tête */
     color: white;
     padding: 1.5rem;
     text-align: center;
@@ -46,17 +27,16 @@ a:hover {
     margin-top: 0.5rem;
 }
 
-/* Section principale du CV */
+/* CONTENU PRINCIPAL */
 .cv-content {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
 }
 
-/* Barre latérale */
+/* SIDEBAR */
 .cv-aside {
     background-color: #e0f2fe;
-    /* Bleu très clair Radix pour la barre latérale, pour la clarté */
     padding: 1.5rem;
     width: 30%;
     box-sizing: border-box;
@@ -65,23 +45,12 @@ a:hover {
 .cv-aside h2 {
     font-size: 1.1rem;
     color: #101825;
-    /* Rétabli en bleu très foncé pour un contraste fort avec le fond clair */
     border-bottom: 1px solid #f29300;
-    /* Orange Radix vif pour la bordure des titres de la barre latérale, pour le contraste */
     margin-top: 1.5rem;
     padding-bottom: 0.3rem;
 }
 
-.cv-aside ul {
-    padding-left: 1.2rem;
-}
-
-.cv-aside li {
-    list-style: square;
-    margin-bottom: 0.4rem;
-}
-
-/* Partie principale */
+/* MAIN AREA */
 .cv-main {
     padding: 1.5rem;
     width: 70%;
@@ -90,9 +59,7 @@ a:hover {
 
 .cv-main h2 {
     color: #112746;
-    /* Bleu foncé Radix pour les titres des sections principales, leur donnant plus de poids */
     border-bottom: 2px solid #f29300;
-    /* Orange Radix vif pour les bordures des titres des sections principales */
     padding-bottom: 0.3rem;
     margin-top: 2rem;
 }
@@ -105,28 +72,5 @@ a:hover {
 .cv-main .dates {
     font-size: 0.9rem;
     color: #f29300;
-    /* Orange Radix vif pour les dates, les mettant en évidence */
     margin: 0.2rem 0;
-}
-
-@media screen and (max-width: 768px) {
-    .cv-content {
-        flex-direction: column;
-    }
-
-    .cv-aside,
-    .cv-main {
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .cv-aside {
-        border-right: none;
-        border-bottom: 1px solid #ccc;
-    }
-
-    .cv-header {
-        text-align: center;
-        padding-bottom: 1rem;
-    }
 }
