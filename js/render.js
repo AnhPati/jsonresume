@@ -1,6 +1,14 @@
 const getTemplateNameFromURL = () => {
     const params = new URLSearchParams(window.location.search);
-    return params.get('template') || 'classic';
+    const urlTemplate = params.get('template');
+
+    if (urlTemplate) {
+        localStorage.setItem('selectedTemplate', urlTemplate);
+        return urlTemplate;
+    }
+
+    const saved = localStorage.getItem('selectedTemplate');
+    return saved || 'classic';
 };
 
 const updateURLParam = (key, value) => {
@@ -61,6 +69,7 @@ const setupTemplateSelector = () => {
     select.addEventListener('change', async (e) => {
         const selected = e.target.value;
         updateURLParam('template', selected);
+        localStorage.setItem('selectedTemplate', selected);
         await renderCV(selected);
     });
 };
