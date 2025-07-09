@@ -25,12 +25,13 @@
     .summary,
     .contact,
     .skills,
-    .additional {
+    .additional,
+    .padding-top-print {
         padding-top: 1rem;
     }
 
     /* Forcer un saut de page avant éducation */
-    .education {
+    #classic .education {
         break-before: page;
         page-break-before: always;
     }

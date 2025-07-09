@@ -30,10 +30,12 @@
                 <section class="skills">
                     <h2>Compétences</h2>
                     {{#skills}}
-                    <h3>{{ group }}</h3>
-                    <ul>
-                        {{#keywords}}<li>{{.}}</li>{{/keywords}}
-                    </ul>
+                    <div class="skills">
+                        <h3>{{ group }}</h3>
+                        <ul>
+                            {{#keywords}}<li>{{.}}</li>{{/keywords}}
+                        </ul>
+                    </div>
                     {{/skills}}
                 </section>
 
@@ -54,10 +56,10 @@
             </div>
 
             <div class="right-column">
-                <section class="work">
+                <section class="work padding-top-print">
                     <h2>Expériences</h2>
                     {{#work}}
-                    <div class="job">
+                    <div class="job padding-top-print">
                         <h3>{{ position }} – {{ company }}</h3>
                         <p class="dates">{{ startDate }} → {{ endDate }}</p>
                         <p class="desc">{{ summary }}</p>
