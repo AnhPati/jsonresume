@@ -108,3 +108,25 @@ a:hover {
     /* Orange Radix vif pour les dates, les mettant en évidence */
     margin: 0.2rem 0;
 }
+
+@media screen and (max-width: 768px) {
+    .cv-content {
+        flex-direction: column;
+    }
+
+    .cv-aside,
+    .cv-main {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .cv-aside {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .cv-header {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+}
