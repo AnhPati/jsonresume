@@ -1,0 +1,18 @@
+.alert {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.alert.error {
+    background-color: #ffe0e0;
+    color: #b00020;
+    border: 1px solid #b00020;
+}
+
+.alert.info {
+    background-color: #e0f0ff;
+    color: #004c99;
+    border: 1px solid #004c99;
+}
