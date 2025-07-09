@@ -35,13 +35,17 @@ const updateURLParam = (key, value) => {
 
 const loadJson = async (url) => {
     const response = await fetch(url);
-    if (!response.ok) throw new Error(`Fichier JSON introuvable : ${url}`);
+    if (!response.ok) {
+        throw new Error(`Le fichier de données est introuvable : ${url}`);
+    }
     return await response.json();
 };
 
 const loadTemplate = async (url) => {
     const response = await fetch(url);
-    if (!response.ok) throw new Error(`Template introuvable : ${url}`);
+    if (!response.ok) {
+        throw new Error(`Le template HTML est introuvable : ${url}`);
+    }
     return await response.text();
 };
 
