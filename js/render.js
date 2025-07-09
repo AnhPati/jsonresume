@@ -13,7 +13,15 @@ const getTemplateNameFromURL = () => {
 
 const getCVNameFromURL = () => {
     const params = new URLSearchParams(window.location.search);
-    return params.get('cv') || 'default';
+    const urlCV = params.get('cv');
+
+    if (urlCV) {
+        localStorage.setItem('selectedCV', urlCV);
+        return urlCV;
+    }
+
+    const saved = localStorage.getItem('selectedCV');
+    return saved || 'default';
 };
 
 const updateURLParam = (key, value) => {
@@ -88,6 +96,7 @@ const setupCVSelector = () => {
     select.addEventListener('change', async (e) => {
         const selected = e.target.value;
         updateURLParam('cv', selected);
+        localStorage.setItem('selectedCV', selected);
         const templateName = getTemplateNameFromURL();
         await renderCV(templateName, selected);
     });
