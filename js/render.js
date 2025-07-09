@@ -11,6 +11,11 @@ const getTemplateNameFromURL = () => {
     return saved || 'classic';
 };
 
+const getCVNameFromURL = () => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('cv') || 'default';
+};
+
 const updateURLParam = (key, value) => {
     const params = new URLSearchParams(window.location.search);
     params.set(key, value);
@@ -40,9 +45,9 @@ const loadStylesheet = (templateName) => {
     document.head.appendChild(newLink);
 };
 
-const renderCV = async (templateName) => {
+const renderCV = async (templateName, cvName) => {
     try {
-        const data = await loadJson('./data/default.json');
+        const data = await loadJson(`./data/${cvName}.json`);
         const template = await loadTemplate(`./templates/${templateName}.html`);
         loadStylesheet(templateName);
 
@@ -70,14 +75,30 @@ const setupTemplateSelector = () => {
         const selected = e.target.value;
         updateURLParam('template', selected);
         localStorage.setItem('selectedTemplate', selected);
-        await renderCV(selected);
+        const cvName = getCVNameFromURL();
+        await renderCV(selected, cvName);
+    });
+};
+
+const setupCVSelector = () => {
+    const select = document.getElementById('cv-selector');
+    const current = getCVNameFromURL();
+    select.value = current;
+
+    select.addEventListener('change', async (e) => {
+        const selected = e.target.value;
+        updateURLParam('cv', selected);
+        const templateName = getTemplateNameFromURL();
+        await renderCV(templateName, selected);
     });
 };
 
 const init = async () => {
     const templateName = getTemplateNameFromURL();
+    const cvName = getCVNameFromURL();
     setupTemplateSelector();
-    await renderCV(templateName);
+    setupCVSelector();
+    await renderCV(templateName, cvName);
 };
 
 init();
