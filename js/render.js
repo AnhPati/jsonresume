@@ -1,4 +1,5 @@
 import { showError } from './alert.js';
+import { setupPrintButton } from './print.js';
 
 const getTemplateNameFromURL = () => {
     const params = new URLSearchParams(window.location.search);
@@ -114,6 +115,7 @@ const init = async () => {
     const cvName = getCVNameFromURL();
     setupTemplateSelector();
     setupCVSelector();
+    setupPrintButton();
     await renderCV(templateName, cvName);
 };
 

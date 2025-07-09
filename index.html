@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/print.css" media="print" />
     <link rel="icon" href="/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
 </head>
 
@@ -26,6 +27,7 @@
             <option value="default">CV par défaut</option>
             <option value="fake">Fake</option>
         </select>
+        <button id="download-pdf">Télécharger en PDF</button>
     </div>
     <main id="cv-container">
     </main>
