@@ -1,9 +1,10 @@
 {
     "basics": {
-        "name": "Romain Felicianne",
+        "firstname": "Romain",
+        "lastname": "Félicianne",
         "label": "Développeur Web & Concepteur Rédacteur Freelance",
         "location": "Jardin, Medellín (Colombie) | Guadeloupe | France",
-        "email": "ton.email@example.com",
+        "email": "romain-felicianne@hotmail.fr",
         "linkedin": "https://www.linkedin.com/in/felicianne-romain",
         "website": "",
         "summary": "Je conçois et développe des interfaces web robustes, lisibles et bien structurées. Spécialisé en React (TypeScript, TanStack Query), j'interviens aussi sur WordPress, Python (Streamlit), Moodle, etc."
