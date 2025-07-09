@@ -1,3 +1,5 @@
+import { showError } from './alert.js';
+
 const getTemplateNameFromURL = () => {
     const params = new URLSearchParams(window.location.search);
     const urlTemplate = params.get('template');
@@ -33,13 +35,13 @@ const updateURLParam = (key, value) => {
 
 const loadJson = async (url) => {
     const response = await fetch(url);
-    if (!response.ok) throw new Error(`Erreur chargement JSON : ${url}`);
+    if (!response.ok) throw new Error(`Fichier JSON introuvable : ${url}`);
     return await response.json();
 };
 
 const loadTemplate = async (url) => {
     const response = await fetch(url);
-    if (!response.ok) throw new Error(`Erreur chargement template : ${url}`);
+    if (!response.ok) throw new Error(`Template introuvable : ${url}`);
     return await response.text();
 };
 
@@ -71,6 +73,7 @@ const renderCV = async (templateName, cvName) => {
         document.getElementById('cv-container').innerHTML = output;
     } catch (error) {
         console.error('Erreur de rendu :', error);
+        showError(error.message);
     }
 };
 
