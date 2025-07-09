@@ -1,50 +1,56 @@
 @media print {
 
-    /* Masquer les contrôles (menu déroulant, etc.) */
-    #controls {
+    /* Masquer les contrôles et éléments inutiles à l'impression */
+    #controls,
+    .no-print {
         display: none !important;
     }
 
-    /* Nettoyer tous les arrière-plans et couleurs */
-    * {
-        background: none !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    body {
-        font-size: 12pt;
-        line-height: 1.5;
-        margin: 0;
-        padding: 0;
-    }
-
-    h1,
-    h2,
-    h3 {
-        page-break-after: avoid;
-        color: #000 !important;
-    }
-
-    a::after {
-        content: " (" attr(href) ")";
-        font-size: 10pt;
-    }
-
-    html,
-    body {
-        width: 100%;
-        height: auto;
-    }
-
-    .cv-main,
-    .cv-aside,
-    .cv-wrapper {
+    /* Empêcher la coupure à l’intérieur de ces blocs */
+    .job,
+    .edu,
+    .skill-group,
+    .languages,
+    .summary,
+    .contact,
+    .skills,
+    .additional,
+    .cv-aside {
+        break-inside: avoid;
         page-break-inside: avoid;
+    }
+
+    /* Ajoute un espacement pour éviter que les blocs soient collés en haut de page */
+    .languages,
+    .summary,
+    .contact,
+    .skills,
+    .additional {
+        padding-top: 1rem;
+    }
+
+    /* Forcer un saut de page avant éducation */
+    .education {
+        break-before: page;
+        page-break-before: always;
+    }
+
+    /* Utilisé pour forcer un remplissage de fond dans l'aside */
+    .print-filler {
+        height: 1000px;
+        content: '';
+        display: block;
     }
 
     @page {
         margin: 1.5cm;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
     }
 }

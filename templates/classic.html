@@ -38,10 +38,12 @@
             <div class="skills">
                 <h2>Compétences</h2>
                 {{#skills}}
-                <h3>{{ group }}</h3>
-                <ul>
-                    {{#keywords}}<li>{{.}}</li>{{/keywords}}
-                </ul>
+                <div class="skill-group">
+                    <h3>{{ group }}</h3>
+                    <ul>
+                        {{#keywords}}<li>{{.}}</li>{{/keywords}}
+                    </ul>
+                </div>
                 {{/skills}}
             </div>
 
@@ -52,6 +54,8 @@
                     {{#additional.interests}}<li>{{.}}</li>{{/additional.interests}}
                 </ul>
             </div>
+
+            <div class="print-filler"></div>
         </aside>
 
         <main class="cv-main">
