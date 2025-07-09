@@ -1,25 +1,33 @@
-async function loadJSON(path) {
-    const res = await fetch(path);
-    return await res.json();
-}
+const loadJson = async (url) => {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`Échec du chargement JSON : ${url}`);
+    return await response.json();
+};
 
-async function loadTemplate(path) {
-    const res = await fetch(path);
-    return await res.text();
-}
+const loadTemplate = async (url) => {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`Échec du chargement du template : ${url}`);
+    return await response.text();
+};
 
-function renderTemplate(template, data) {
-    return template.replace(/{{\s*(\w+(\.\w+)*)\s*}}/g, (_, key) => {
-        return key.split('.').reduce((o, k) => (o ? o[k] : ''), data) || '';
-    });
-}
+const renderCV = async () => {
+    try {
+        const data = await loadJson("./data/default.json");
+        const template = await loadTemplate("./templates/cv.html");
 
-async function main() {
-    const data = await loadJSON('./data/default.json');
-    const template = await loadTemplate('./templates/cv.html');
-    const rendered = renderTemplate(template, data);
+        const output = Mustache.render(template, {
+            ...data.basics,
+            skills: data.skills,
+            work: data.work,
+            education: data.education,
+            languages: data.languages,
+            additional: data.additional
+        });
 
-    document.getElementById('cv-container').innerHTML = rendered;
-}
+        document.getElementById("cv-container").innerHTML = output;
+    } catch (error) {
+        console.error("Erreur de rendu :", error);
+    }
+};
 
-main();
+renderCV();
