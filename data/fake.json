@@ -1,0 +1,93 @@
+{
+    "basics": {
+        "firstname": "Alexandre",
+        "lastname": "Durand",
+        "label": "Développeur Full Stack Freelance",
+        "location": "Lyon, France",
+        "email": "alex.durand@example.com",
+        "linkedin": "https://www.linkedin.com/in/alexandre-durand",
+        "website": "https://alexdev.io",
+        "summary": "Développeur web passionné, spécialisé en stacks modernes JS. J'interviens sur des projets web & mobiles de la conception à la mise en production."
+    },
+    "languages": [
+        {
+            "language": "Français",
+            "fluency": "Natif"
+        },
+        {
+            "language": "Anglais",
+            "fluency": "C1"
+        }
+    ],
+    "skills": [
+        {
+            "group": "Frontend",
+            "keywords": [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Tailwind",
+                "Framer Motion"
+            ]
+        },
+        {
+            "group": "Backend",
+            "keywords": [
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "PostgreSQL"
+            ]
+        },
+        {
+            "group": "Outils",
+            "keywords": [
+                "Docker",
+                "GitHub Actions",
+                "Figma",
+                "Notion"
+            ]
+        }
+    ],
+    "work": [
+        {
+            "company": "DevIndépendant",
+            "position": "Développeur Web Freelance",
+            "startDate": "2020-01",
+            "endDate": "Present",
+            "summary": "Projets full stack : développement, déploiement, gestion client. +30 projets réalisés, +10 clients réguliers."
+        },
+        {
+            "company": "Tech4Good",
+            "position": "Développeur Front-End",
+            "startDate": "2018-06",
+            "endDate": "2019-12",
+            "summary": "Applications React + Redux, intégration UI/UX, responsive & accessibilité."
+        }
+    ],
+    "education": [
+        {
+            "institution": "Wild Code School",
+            "area": "Développement Web",
+            "startDate": "2017-01",
+            "endDate": "2017-06",
+            "summary": "Formation intensive JS : React, Node.js, MongoDB, projets collaboratifs."
+        },
+        {
+            "institution": "Université Lyon 2",
+            "area": "Licence Info-Com",
+            "startDate": "2013-09",
+            "endDate": "2016-06",
+            "summary": "Communication numérique, culture web, gestion de projets digitaux."
+        }
+    ],
+    "additional": {
+        "interests": [
+            "web performance",
+            "accessibilité",
+            "voyage à vélo",
+            "musique électronique"
+        ],
+        "lifestyle": "Travail remote depuis la campagne ou les capitales européennes. Organisation rigoureuse et communication fluide."
+    }
+}
