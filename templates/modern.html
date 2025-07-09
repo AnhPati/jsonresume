@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ firstname }} {{ lastname }} – CV</title>
+    <link rel="stylesheet" href="../styles/modern.css" />
+</head>
+
+<body>
+    <div class="cv-wrapper">
+        <header class="cv-header">
+            <h1>{{ firstname }} {{ lastname }}</h1>
+            <p class="cv-title">{{ label }}</p>
+            <p class="cv-location">{{ location }}</p>
+            <p class="cv-contact">
+                <a href="mailto:{{ email }}">{{ email }}</a> |
+                <a href="{{ linkedin }}">LinkedIn</a>
+            </p>
+        </header>
+
+        <section class="cv-summary">
+            <h2>À propos</h2>
+            <p>{{ summary }}</p>
+        </section>
+
+        <section class="cv-main">
+            <div class="left-column">
+                <section class="skills">
+                    <h2>Compétences</h2>
+                    {{#skills}}
+                    <h3>{{ group }}</h3>
+                    <ul>
+                        {{#keywords}}<li>{{.}}</li>{{/keywords}}
+                    </ul>
+                    {{/skills}}
+                </section>
+
+                <section class="languages">
+                    <h2>Langues</h2>
+                    <ul>
+                        {{#languages}}<li>{{ language }} — {{ fluency }}</li>{{/languages}}
+                    </ul>
+                </section>
+
+                <section class="additional">
+                    <h2>Autres</h2>
+                    <p>{{ additional.lifestyle }}</p>
+                    <ul>
+                        {{#additional.interests}}<li>{{.}}</li>{{/additional.interests}}
+                    </ul>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section class="work">
+                    <h2>Expériences</h2>
+                    {{#work}}
+                    <div class="job">
+                        <h3>{{ position }} – {{ company }}</h3>
+                        <p class="dates">{{ startDate }} → {{ endDate }}</p>
+                        <p class="desc">{{ summary }}</p>
+                    </div>
+                    {{/work}}
+                </section>
+
+                <section class="education">
+                    <h2>Formation</h2>
+                    {{#education}}
+                    <div class="edu">
+                        <h3>{{ area }} – {{ institution }}</h3>
+                        <p class="dates">{{ startDate }}{{#endDate}} → {{ endDate }}{{/endDate}}</p>
+                        <p class="desc">{{ summary }}</p>
+                    </div>
+                    {{/education}}
+                </section>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
