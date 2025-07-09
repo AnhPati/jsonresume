@@ -13,7 +13,7 @@ const loadTemplate = async (url) => {
 const renderCV = async () => {
     try {
         const data = await loadJson("./data/default.json");
-        const template = await loadTemplate("./templates/cv.html");
+        const template = await loadTemplate("./templates/classic.html");
 
         const output = Mustache.render(template, {
             ...data.basics,

@@ -1,66 +1,110 @@
+/* Reset basique */
 body {
-    font-family: system-ui, sans-serif;
-    background-color: #fff;
-    color: #333;
     margin: 0;
-    padding: 2rem;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
+    background: #eff6ff;
+    /* Très léger bleu Radix pour un fond plus lumineux et lisible */
+    color: #101825;
+    /* Bleu très foncé Radix pour le texte principal, offrant un meilleur contraste */
 }
 
-.cv-container {
-    max-width: 800px;
-    margin: 0 auto;
+h1,
+h2,
+h3 {
+    margin: 0.5em 0;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-.role {
-    font-weight: bold;
-    color: #555;
-}
-
-.contact a {
-    color: #0066cc;
+a {
+    color: #ff9a00;
+    /* Orange vif Radix pour les liens, couleur complémentaire */
     text-decoration: none;
 }
 
-h2 {
-    border-bottom: 1px solid #ccc;
+a:hover {
+    text-decoration: underline;
+}
+
+/* En-tête du CV */
+.cv-header {
+    background-color: #112746;
+    /* Bleu foncé Radix pour l'en-tête */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.cv-header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.cv-header .title {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+/* Section principale du CV */
+.cv-content {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+/* Barre latérale */
+.cv-aside {
+    background-color: #e0f2fe;
+    /* Bleu très clair Radix pour la barre latérale, pour la clarté */
+    padding: 1.5rem;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.cv-aside h2 {
+    font-size: 1.1rem;
+    color: #101825;
+    /* Rétabli en bleu très foncé pour un contraste fort avec le fond clair */
+    border-bottom: 1px solid #f29300;
+    /* Orange Radix vif pour la bordure des titres de la barre latérale, pour le contraste */
+    margin-top: 1.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.cv-aside ul {
+    padding-left: 1.2rem;
+}
+
+.cv-aside li {
+    list-style: square;
+    margin-bottom: 0.4rem;
+}
+
+/* Partie principale */
+.cv-main {
+    padding: 1.5rem;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.cv-main h2 {
+    color: #112746;
+    /* Bleu foncé Radix pour les titres des sections principales, leur donnant plus de poids */
+    border-bottom: 2px solid #f29300;
+    /* Orange Radix vif pour les bordures des titres des sections principales */
     padding-bottom: 0.3rem;
     margin-top: 2rem;
 }
 
-.skill-group,
-.job,
-.edu {
-    margin-bottom: 1.2rem;
+.cv-main .job,
+.cv-main .edu {
+    margin-bottom: 1.5rem;
 }
 
-ul {
-    padding-left: 1.2rem;
-    margin: 0.5rem 0;
-}
-
-li {
-    margin-bottom: 0.3rem;
-}
-
-@media print {
-    body {
-        padding: 0;
-        font-size: 11pt;
-    }
-
-    a {
-        color: #000;
-        text-decoration: none;
-    }
+.cv-main .dates {
+    font-size: 0.9rem;
+    color: #f29300;
+    /* Orange Radix vif pour les dates, les mettant en évidence */
+    margin: 0.2rem 0;
 }
