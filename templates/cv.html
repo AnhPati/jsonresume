@@ -5,17 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ name }} – CV</title>
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/classic.css" />
 </head>
 
 <body>
-    <main class="cv">
+    <main class="cv-container">
         <header>
             <h1>{{ name }}</h1>
             <p class="role">{{ label }}</p>
             <p class="location">{{ location }}</p>
             <p class="contact">
-                <a href="mailto:{{ email }}">{{ email }}</a> |
+                <a href="mailto:{{ email }}">{{ email }}</a> •
                 <a href="{{ linkedin }}">LinkedIn</a>
             </p>
         </header>
@@ -28,10 +28,12 @@
         <section class="skills">
             <h2>Compétences</h2>
             {{#skills}}
-            <h3>{{ group }}</h3>
-            <ul>
-                {{#keywords}}<li>{{.}}</li>{{/keywords}}
-            </ul>
+            <div class="skill-group">
+                <h3>{{ group }}</h3>
+                <ul>
+                    {{#keywords}}<li>{{.}}</li>{{/keywords}}
+                </ul>
+            </div>
             {{/skills}}
         </section>
 
