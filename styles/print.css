@@ -30,7 +30,7 @@
         padding-top: 1rem;
     }
 
-    /* Forcer un saut de page avant éducation */
+    /* Forcer un saut de page avant éducation dans le template classic */
     #classic .education {
         break-before: page;
         page-break-before: always;

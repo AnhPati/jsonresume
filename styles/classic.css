@@ -1,4 +1,5 @@
 /* --- COULEURS / STRUCTURE CLASSIQUE --- */
+
 body {
     background: #eff6ff;
     color: #101825;
@@ -74,4 +75,32 @@ a {
     font-size: 0.9rem;
     color: #f29300;
     margin: 0.2rem 0;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+
+    .cv-main,
+    .cv-content {
+        flex-direction: column !important;
+    }
+
+    .cv-aside {
+        width: 100% !important;
+        padding: 1rem !important;
+        border-right: none !important;
+        border-bottom: 1px solid #ccc !important;
+        box-sizing: border-box !important;
+    }
+
+    .cv-main {
+        width: 100% !important;
+        padding: 1rem !important;
+        box-sizing: border-box !important;
+    }
+
+    .cv-header {
+        text-align: center !important;
+        padding-bottom: 1rem !important;
+    }
 }

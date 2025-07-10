@@ -18,6 +18,7 @@ h3 {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 a:hover {
@@ -75,6 +76,7 @@ button:disabled {
     border: 1px solid #004c99;
 }
 
+/* --- CONTROLS UI (select, file input, container) --- */
 #controls {
     display: flex;
     align-items: flex-end;
@@ -101,7 +103,6 @@ button:disabled {
     border-width: 2px;
     cursor: pointer;
 }
-
 
 .controls-item select:hover {
     border-color: #A95200;
@@ -154,29 +155,5 @@ button:disabled {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
-
-    .cv-main,
-    .cv-content {
-        flex-direction: column !important;
-    }
-
-    .cv-aside,
-    .left-column,
-    .right-column,
-    .cv-main {
-        width: 100% !important;
-        padding: 1rem !important;
-        box-sizing: border-box !important;
-    }
-
-    .cv-aside {
-        border-right: none !important;
-        border-bottom: 1px solid #ccc !important;
-    }
-
-    .cv-header {
-        text-align: center !important;
-        padding-bottom: 1rem !important;
-    }
-}
+/* --- RESPONSIVE GLOBAL --- */
+@media screen and (max-width: 768px) {}
