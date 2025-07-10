@@ -26,11 +26,11 @@
         </section>
 
         <section class="cv-main">
-            <div class="left-column">
+            <aside class="left-column">
                 <section class="skills">
                     <h2>Compétences</h2>
                     {{#skills}}
-                    <div class="skills">
+                    <div class="skill-group">
                         <h3>{{ group }}</h3>
                         <ul>
                             {{#keywords}}<li>{{.}}</li>{{/keywords}}
@@ -53,9 +53,9 @@
                         {{#additional.interests}}<li>{{.}}</li>{{/additional.interests}}
                     </ul>
                 </section>
-            </div>
+            </aside>
 
-            <div class="right-column">
+            <main class="right-column">
                 <section class="work padding-top-print">
                     <h2>Expériences</h2>
                     {{#work}}
@@ -77,7 +77,7 @@
                     </div>
                     {{/education}}
                 </section>
-            </div>
+            </main>
         </section>
     </div>
 </body>

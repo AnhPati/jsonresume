@@ -11,15 +11,13 @@
     .edu,
     .skill-group,
     .languages,
-    .summary,
-    .contact,
-    .skills,
-    .additional,
-    .cv-aside,
     .cv-summary,
     .cv-contact,
     .cv-location,
     .cv-title,
+    .skills,
+    .additional,
+    .cv-aside,
     .cv-main {
         break-inside: avoid;
         page-break-inside: avoid;
@@ -27,8 +25,8 @@
 
     /* Ajoute un espacement pour éviter que les blocs soient collés en haut de page */
     .languages,
-    .summary,
-    .contact,
+    .cv-summary,
+    .cv-contact,
     .skills,
     .additional,
     .padding-top-print {

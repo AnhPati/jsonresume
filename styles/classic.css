@@ -1,5 +1,4 @@
 /* --- COULEURS / STRUCTURE CLASSIQUE --- */
-
 body {
     background: #eff6ff;
     color: #101825;
@@ -23,10 +22,15 @@ a {
     margin: 0;
 }
 
-.cv-header .title {
+.cv-title {
     font-size: 1.1rem;
     font-weight: 300;
     margin-top: 0.5rem;
+}
+
+.cv-location {
+    font-size: 1rem;
+    color: #cce4ff;
 }
 
 /* CONTENU PRINCIPAL */

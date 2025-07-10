@@ -11,31 +11,31 @@
 <body>
     <header class="cv-header">
         <h1>{{ firstname }} {{ lastname }}</h1>
-        <p class="title">{{ label }}</p>
+        <p class="cv-title">{{ label }}</p>
+        <p class="cv-location">{{ location }}</p>
     </header>
 
     <section id="classic" class="cv-content">
         <aside class="cv-aside">
-            <div class="contact">
+            <section class="cv-contact">
                 <h2>Contact</h2>
                 <p><a href="mailto:{{ email }}">{{ email }}</a></p>
                 <p><a href="{{ linkedin }}">LinkedIn</a></p>
-                <p>{{ location }}</p>
-            </div>
+            </section>
 
-            <div class="summary">
+            <section class="cv-summary">
                 <h2>À propos</h2>
                 <p>{{ summary }}</p>
-            </div>
+            </section>
 
-            <div class="languages">
+            <section class="languages">
                 <h2>Langues</h2>
                 <ul>
                     {{#languages}}<li>{{ language }} — {{ fluency }}</li>{{/languages}}
                 </ul>
-            </div>
+            </section>
 
-            <div class="skills">
+            <section class="skills">
                 <h2>Compétences</h2>
                 {{#skills}}
                 <div class="skill-group">
@@ -45,15 +45,15 @@
                     </ul>
                 </div>
                 {{/skills}}
-            </div>
+            </section>
 
-            <div class="additional">
+            <section class="additional">
                 <h2>Autres</h2>
                 <p>{{ additional.lifestyle }}</p>
                 <ul>
                     {{#additional.interests}}<li>{{.}}</li>{{/additional.interests}}
                 </ul>
-            </div>
+            </section>
 
             <div class="print-filler"></div>
         </aside>
