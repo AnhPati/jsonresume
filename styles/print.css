@@ -15,7 +15,12 @@
     .contact,
     .skills,
     .additional,
-    .cv-aside {
+    .cv-aside,
+    .cv-summary,
+    .cv-contact,
+    .cv-location,
+    .cv-title,
+    .cv-main {
         break-inside: avoid;
         page-break-inside: avoid;
     }
@@ -27,7 +32,7 @@
     .skills,
     .additional,
     .padding-top-print {
-        padding-top: 1rem;
+        padding-top: 1rem !important;
     }
 
     /* Forcer un saut de page avant éducation dans le template classic */
@@ -41,6 +46,12 @@
         height: 1000px;
         content: '';
         display: block;
+    }
+
+    .cv-summary,
+    .cv-main {
+        break-before: avoid;
+        page-break-before: avoid;
     }
 
     @page {
