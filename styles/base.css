@@ -48,6 +48,11 @@ li {
     border: 1px solid #004c99;
 }
 
+#controls {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
 .dev-only {
     display: none;
 }
