@@ -111,13 +111,40 @@ const setupCVSelector = () => {
     });
 };
 
+const setupReloadButton = () => {
+    const reloadButton = document.getElementById('reload-data');
+    if (!reloadButton) return;
+
+    reloadButton.addEventListener('click', async () => {
+        const templateName = getTemplateNameFromURL();
+        const cvName = getCVNameFromURL();
+        await renderCV(templateName, cvName);
+    });
+};
+
+const isDevMode =
+    ['localhost', '127.0.0.1'].includes(window.location.hostname) ||
+    window.location.hostname.startsWith('192.168.') ||
+    window.location.search.includes('dev=true');
+
+const showDevElements = () => {
+    if (isDevMode) {
+        document.querySelectorAll('.dev-only').forEach(el => {
+            el.style.display = 'inline-block';
+        });
+    }
+};
+
 const init = async () => {
     const templateName = getTemplateNameFromURL();
     const cvName = getCVNameFromURL();
     setupTemplateSelector();
     setupCVSelector();
     setupPrintButton();
+    setupReloadButton();
+    showDevElements();
     await renderCV(templateName, cvName);
 };
+
 
 init();
