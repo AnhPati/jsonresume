@@ -128,9 +128,14 @@ const setupUploadInput = () => {
     const input = document.getElementById('upload-json');
     if (!input) return;
 
+    const fileNameDisplay = document.getElementById('file-name');
+
     input.addEventListener('change', async (e) => {
         const file = e.target.files[0];
         if (!file) return;
+
+        // Affiche le nom du fichier sélectionné
+        fileNameDisplay.textContent = file.name;
 
         const reader = new FileReader();
         reader.onload = async (event) => {

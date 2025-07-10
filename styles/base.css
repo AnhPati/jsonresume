@@ -1,4 +1,8 @@
 /* --- TYPO / GLOBAL --- */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -28,6 +32,29 @@ li {
     margin-bottom: 0.3rem;
 }
 
+button {
+    padding: 0.575rem 1rem;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid #f29300;
+    background-color: white;
+    color: #f29300;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #f29300;
+    color: white;
+    border-color: #A95200;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 /* --- ALERTES --- */
 .alert {
     padding: 1.5rem;
@@ -49,8 +76,78 @@ li {
 }
 
 #controls {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
     padding: 1rem;
-    border-bottom: 1px solid #ccc;
+}
+
+.controls-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.controls-item select {
+    background: white;
+    color: #f29300;
+    padding: 0.5rem 0.4rem;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    border-color: #f29300;
+    border-width: 2px;
+    cursor: pointer;
+}
+
+
+.controls-item select:hover {
+    border-color: #A95200;
+    color: #A95200;
+}
+
+.controls-item select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(242, 147, 0, 0.3);
+}
+
+.controls-item .file-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.controls-item input[type="file"] {
+    display: none;
+}
+
+.controls-item .file-label {
+    background-color: #f29300;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+}
+
+.controls-item .file-label:hover {
+    background-color: #A95200;
+}
+
+.controls-item .file-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .dev-only {

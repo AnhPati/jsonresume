@@ -16,20 +16,30 @@
 
 <body>
     <div id="controls">
-        <label for="template-select">Choisir un modèle :</label>
-        <select id="template-select">
-            <option value="classic">Classique</option>
-            <option value="modern">Moderne</option>
-        </select>
-        <label for="cv-selector">Choisir un modèle :</label>
-        <select id="cv-selector">
-            <option value="default">CV par défaut</option>
-            <option value="fake">Fake</option>
-        </select>
+        <div class="controls-item">
+            <label for="template-select">Choisir un modèle :</label>
+            <select id="template-select">
+                <option value="classic">Classique</option>
+                <option value="modern">Moderne</option>
+            </select>
+        </div>
+        <div class="controls-item">
+            <label for="cv-selector">Choisir un modèle :</label>
+            <select id="cv-selector">
+                <option value="default">CV par défaut</option>
+                <option value="fake">Fake</option>
+            </select>
+        </div>
         <button id="download-pdf">Télécharger en PDF</button>
         <button id="reload-data" class="dev-only">Recharger les données</button>
-        <label for="upload-json" class="dev-only">Charger un JSON local :</label>
-        <input type="file" id="upload-json" accept=".json" class="dev-only" />
+        <div class="controls-item">
+            <label for="upload-json" class="dev-only">Charger un JSON local :</label>
+            <div class="file-input-wrapper">
+                <label for="upload-json" class="file-label">Choisir un fichier</label>
+                <span id="file-name" class="file-name">Aucun fichier</span>
+                <input type="file" id="upload-json" accept=".json" />
+            </div>
+        </div>
         <button id="toggle-auto-refresh" class="dev-only"></button>
     </div>
     <main id="cv-container">
