@@ -1,15 +1,15 @@
 import { showError } from './alert.js';
 import { setupPrintButton } from './print.js';
 
+let autoRefreshInterval = null;
+
 const getTemplateNameFromURL = () => {
     const params = new URLSearchParams(window.location.search);
     const urlTemplate = params.get('template');
-
     if (urlTemplate) {
         localStorage.setItem('selectedTemplate', urlTemplate);
         return urlTemplate;
     }
-
     const saved = localStorage.getItem('selectedTemplate');
     return saved || 'classic';
 };
@@ -17,12 +17,10 @@ const getTemplateNameFromURL = () => {
 const getCVNameFromURL = () => {
     const params = new URLSearchParams(window.location.search);
     const urlCV = params.get('cv');
-
     if (urlCV) {
         localStorage.setItem('selectedCV', urlCV);
         return urlCV;
     }
-
     const saved = localStorage.getItem('selectedCV');
     return saved || 'default';
 };
@@ -149,6 +147,52 @@ const setupUploadInput = () => {
     });
 };
 
+const setupAutoRefresh = () => {
+    const button = document.getElementById('toggle-auto-refresh');
+    if (!button) return;
+
+    const getStatus = () => localStorage.getItem('autoRefresh') === 'true';
+
+    const updateButtonText = () => {
+        button.textContent = getStatus()
+            ? 'Désactiver auto-refresh'
+            : 'Activer auto-refresh';
+    };
+
+    const startInterval = () => {
+        if (autoRefreshInterval) return;
+        autoRefreshInterval = setInterval(async () => {
+            const templateName = getTemplateNameFromURL();
+            const cvName = getCVNameFromURL();
+            await renderCV(templateName, cvName);
+        }, 3000);
+    };
+
+    const stopInterval = () => {
+        clearInterval(autoRefreshInterval);
+        autoRefreshInterval = null;
+    };
+
+    button.addEventListener('click', () => {
+        const enabled = getStatus();
+        localStorage.setItem('autoRefresh', String(!enabled));
+        updateButtonText();
+
+        if (!enabled) {
+            startInterval();
+        } else {
+            stopInterval();
+        }
+    });
+
+    // Initial state on load
+    if (getStatus()) {
+        startInterval();
+    }
+
+    updateButtonText();
+};
+
 const isDevMode =
     ['localhost', '127.0.0.1'].includes(window.location.hostname) ||
     window.location.hostname.startsWith('192.168.') ||
@@ -165,12 +209,14 @@ const showDevElements = () => {
 const init = async () => {
     const templateName = getTemplateNameFromURL();
     const cvName = getCVNameFromURL();
+
     setupTemplateSelector();
     setupCVSelector();
     setupPrintButton();
     setupReloadButton();
     setupUploadInput();
     showDevElements();
+    setupAutoRefresh();
     await renderCV(templateName, cvName);
 };
 
