@@ -93,6 +93,7 @@ button:disabled {
 }
 
 .controls-item select {
+    text-align: center;
     background: white;
     color: #f29300;
     padding: 0.5rem 0.4rem;
@@ -156,4 +157,34 @@ button:disabled {
 }
 
 /* --- RESPONSIVE GLOBAL --- */
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    #controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .controls-item {
+        width: 100%;
+    }
+
+    .controls-item select {
+        width: 100%;
+    }
+
+    .controls-item .file-input-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .controls-item .file-name {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+    }
+}
