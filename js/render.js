@@ -51,12 +51,13 @@ const loadTemplate = async (url) => {
 };
 
 const loadStylesheet = (templateName) => {
-    const oldLink = document.querySelector("link[href*='/styles/']");
-    if (oldLink) oldLink.remove();
+    const existingTemplateLink = document.querySelector("link[data-template-style]");
+    if (existingTemplateLink) existingTemplateLink.remove();
 
     const newLink = document.createElement('link');
     newLink.rel = 'stylesheet';
     newLink.href = `./styles/${templateName}.css`;
+    newLink.setAttribute('data-template-style', 'true');
     document.head.appendChild(newLink);
 };
 

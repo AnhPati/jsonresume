@@ -48,27 +48,34 @@ li {
     border: 1px solid #004c99;
 }
 
+.dev-only {
+    display: none;
+    background: red;
+}
+
 @media screen and (max-width: 768px) {
-    .cv-main {
-        flex-direction: column;
+
+    .cv-main,
+    .cv-content {
+        flex-direction: column !important;
     }
 
     .cv-aside,
     .left-column,
     .right-column,
     .cv-main {
-        width: 100%;
-        padding: 1rem;
-        box-sizing: border-box;
+        width: 100% !important;
+        padding: 1rem !important;
+        box-sizing: border-box !important;
     }
 
     .cv-aside {
-        border-right: none;
-        border-bottom: 1px solid #ccc;
+        border-right: none !important;
+        border-bottom: 1px solid #ccc !important;
     }
 
     .cv-header {
-        text-align: center;
-        padding-bottom: 1rem;
+        text-align: center !important;
+        padding-bottom: 1rem !important;
     }
 }
