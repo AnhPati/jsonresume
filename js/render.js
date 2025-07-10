@@ -61,9 +61,8 @@ const loadStylesheet = (templateName) => {
     document.head.appendChild(newLink);
 };
 
-const renderCV = async (templateName, cvName) => {
+const renderCVWithData = async (templateName, data) => {
     try {
-        const data = await loadJson(`./data/${cvName}.json`);
         const template = await loadTemplate(`./templates/${templateName}.html`);
         loadStylesheet(templateName);
 
@@ -78,9 +77,14 @@ const renderCV = async (templateName, cvName) => {
 
         document.getElementById('cv-container').innerHTML = output;
     } catch (error) {
-        console.error('Erreur de rendu :', error);
+        console.error('Erreur de rendu avec données personnalisées :', error);
         showError(error.message);
     }
+};
+
+const renderCV = async (templateName, cvName) => {
+    const data = await loadJson(`./data/${cvName}.json`);
+    await renderCVWithData(templateName, data);
 };
 
 const setupTemplateSelector = () => {
@@ -122,6 +126,29 @@ const setupReloadButton = () => {
     });
 };
 
+const setupUploadInput = () => {
+    const input = document.getElementById('upload-json');
+    if (!input) return;
+
+    input.addEventListener('change', async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = async (event) => {
+            try {
+                const data = JSON.parse(event.target.result);
+                const templateName = getTemplateNameFromURL();
+                await renderCVWithData(templateName, data);
+            } catch (err) {
+                console.error('Fichier JSON invalide :', err);
+                showError("Le fichier JSON n'est pas valide.");
+            }
+        };
+        reader.readAsText(file);
+    });
+};
+
 const isDevMode =
     ['localhost', '127.0.0.1'].includes(window.location.hostname) ||
     window.location.hostname.startsWith('192.168.') ||
@@ -142,9 +169,9 @@ const init = async () => {
     setupCVSelector();
     setupPrintButton();
     setupReloadButton();
+    setupUploadInput();
     showDevElements();
     await renderCV(templateName, cvName);
 };
-
 
 init();
