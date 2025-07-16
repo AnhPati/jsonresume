@@ -19,13 +19,20 @@
         <aside class="cv-aside">
             <section class="cv-contact">
                 <h2>Contact</h2>
-                <p><a href="mailto:{{ email }}">{{ email }}</a></p>
-                <p><a href="{{ linkedin }}">LinkedIn</a></p>
+                <p><a href="tel:{{ telephone }}" target="_blank">{{ telephone }}</a></p>
+                <p><a href="{{ whatsapp }}" target="_blank">Whatsapp</a></p>
+                <p><a href="mailto:{{ email }}" target="_blank">{{ email }}</a></p>
+                <p><a href="{{ linkedin }}" target="_blank">LinkedIn</a></p>
+                <p><a href="{{ malt }}" target="_blank">Malt</a></p>
+                <p><a href="{{ github }}" target="_blank">GitHub</a></p>
             </section>
 
             <section class="cv-summary">
                 <h2>À propos</h2>
-                <p>{{ summary }}</p>
+                <p>
+                    {{ summary.about }}<br><br>
+                    <span class="quote-container"><i>{{summary.quote.sentence}}</i> — {{summary.quote.author}}</span>
+                </p>
             </section>
 
             <section class="languages">

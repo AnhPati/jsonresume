@@ -56,6 +56,10 @@ a {
     padding-bottom: 0.3rem;
 }
 
+.quote-container {
+    font-weight: 300;
+}
+
 /* MAIN AREA */
 .cv-main {
     padding: 1.5rem;
