@@ -1,0 +1,204 @@
+{
+    "basics": {
+        "firstname": "Romain",
+        "lastname": "Félicianne",
+        "label": "Développeur Web & Concepteur Rédacteur Freelance",
+        "location": "Jardín, Medellín (Colombie) | Guadeloupe | France | Canada",
+        "email": "romain-felicianne@hotmail.fr",
+        "linkedin": "https://www.linkedin.com/in/felicianne-romain",
+        "website": "",
+        "summary": "Développeur front-end freelance (React, TypeScript, Streamlit), j'interviens sur des projets web variés : applications, dashboards, e-learning, SEO, rédaction. Mon approche est autonome, structurée et humaine."
+    },
+    "languages": [
+        {
+            "language": "Français",
+            "fluency": "Natif"
+        },
+        {
+            "language": "Espagnol",
+            "fluency": "C1"
+        },
+        {
+            "language": "Anglais",
+            "fluency": "B1"
+        },
+        {
+            "language": "Allemand",
+            "fluency": "B1"
+        }
+    ],
+    "skills": [
+        {
+            "group": "Frontend",
+            "keywords": [
+                "React",
+                "TypeScript",
+                "TanStack Query",
+                "HTML5",
+                "CSS3",
+                "SCSS",
+                "Tailwind",
+                "Bulma",
+                "Radix UI",
+                "ShadCN"
+            ]
+        },
+        {
+            "group": "Data Visualisation & Outils",
+            "keywords": [
+                "Streamlit",
+                "Shiny",
+                "Python",
+                "Django",
+                "Firebase"
+            ]
+        },
+        {
+            "group": "CMS & Contenu",
+            "keywords": [
+                "WordPress",
+                "Moodle",
+                "OpenEdX",
+                "Shopify",
+                "Liquid",
+                "Rédaction SEO",
+                "UX Wording",
+                "Newsletter"
+            ]
+        },
+        {
+            "group": "Transverses",
+            "keywords": [
+                "Git",
+                "Mentorat",
+                "Code Review",
+                "Méthodes agiles",
+                "Gestion de projet"
+            ]
+        }
+    ],
+    "work": [
+        {
+            "company": "Freelance",
+            "position": "Développeur Web & Concepteur Rédacteur",
+            "startDate": "2016-04",
+            "endDate": "Present",
+            "summary": "+20 missions de développement, +10 missions de rédaction UX ou SEO. Expertise React, Streamlit, WordPress."
+        },
+        {
+            "company": "Coding Accelerator",
+            "position": "Mentor Technique",
+            "startDate": "2024-01",
+            "endDate": "Present",
+            "summary": "Correction d’épreuves d’algorithmie (JS, Python, C#...), mentorat technique, structuration de l’offre des freelances."
+        },
+        {
+            "company": "Le Chemin de la Nature",
+            "position": "Développeur Front-End",
+            "startDate": "2019-01",
+            "endDate": "Present",
+            "summary": "Intégration continue WordPress/Moodle. Personnalisation front, dev spécifique, maintenance et accompagnement pédagogique."
+        },
+        {
+            "company": "SANE STANDARD",
+            "position": "Développeur WordPress",
+            "startDate": "2022-06",
+            "endDate": "2022-09",
+            "summary": "Site vitrine : charte graphique, thème, plugins, intégration."
+        },
+        {
+            "company": "Alliance Française Paris",
+            "position": "Développeur Intégrateur",
+            "startDate": "2017-11",
+            "endDate": "2019-12",
+            "summary": "Intégration de MOOCs sur FUN-MOOC via OpenEdX. HTML/CSS, tests, corrections, rédaction."
+        },
+        {
+            "company": "Alfie",
+            "position": "Intégration web / Shopify",
+            "startDate": "2019-07",
+            "endDate": "2019-07",
+            "summary": "Modifications d'une boutique Shopify (CSS3 / Liquid)."
+        },
+        {
+            "company": "Swapp",
+            "position": "Développeur Front-End",
+            "startDate": "2018-09",
+            "endDate": "2018-10",
+            "summary": "Intégration HTML/CSS/JS sous Django avec méthode BEM et Bootstrap."
+        },
+        {
+            "company": "zoneOUEST",
+            "position": "Création de newsletter",
+            "startDate": "2018-10",
+            "endDate": "2018-10",
+            "summary": "Gabarit responsive avec tableau de données, compatible messageries."
+        },
+        {
+            "company": "We are the Web",
+            "position": "Développeur WordPress / Rédacteur SEO",
+            "startDate": "2018-06",
+            "endDate": "2018-08",
+            "summary": "Création et refonte de site WordPress. Rédaction SEO, pré-audit et optimisations."
+        },
+        {
+            "company": "Jonjon's Coconuts",
+            "position": "Développement front-end",
+            "startDate": "2018-04",
+            "endDate": "2018-05",
+            "summary": "Intégration de maquettes en HTML, CSS, JS, Bootstrap."
+        },
+        {
+            "company": "Lalyfactory (AARNO)",
+            "position": "Rédacteur web",
+            "startDate": "2018-03",
+            "endDate": "2018-03",
+            "summary": "Rédaction de fiches produits optimisées SEO."
+        },
+        {
+            "company": "Fyvor",
+            "position": "Rédacteur SEO",
+            "startDate": "2016-06",
+            "endDate": "Present",
+            "summary": "Rédaction d’articles descriptifs de sites marchands."
+        },
+        {
+            "company": "96 Secondes",
+            "position": "Auteur & Voix-Off",
+            "startDate": "2016-05",
+            "endDate": "Present",
+            "summary": "Script & voix off pour vidéos explicatives."
+        }
+    ],
+    "education": [
+        {
+            "institution": "OpenClassrooms",
+            "area": "Développement Web Junior",
+            "startDate": "2017-12",
+            "endDate": "2018-09",
+            "summary": "HTML5, CSS3, JavaScript, PHP, Git, SEO, projets front-end complets."
+        },
+        {
+            "institution": "Autodidacte",
+            "area": "Formation continue",
+            "startDate": "2016-12",
+            "summary": "ReactJS, TypeScript, Streamlit, Shiny, Firebase, NextJS, WordPress, CMS."
+        },
+        {
+            "institution": "ATLA",
+            "area": "Management Artistique et Culturel",
+            "startDate": "2015-12",
+            "endDate": "2016-03",
+            "summary": "Gestion de projets, production, communication, accompagnement."
+        }
+    ],
+    "additional": {
+        "interests": [
+            "UX design",
+            "pédagogie",
+            "projets culturels",
+            "mentorat"
+        ],
+        "lifestyle": "Travail à distance depuis la Colombie, la Guadeloupe ou ailleurs. Autonomie, rigueur et approche humaine."
+    }
+}
