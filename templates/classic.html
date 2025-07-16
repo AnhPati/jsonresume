@@ -19,12 +19,13 @@
         <aside class="cv-aside">
             <section class="cv-contact">
                 <h2>Contact</h2>
-                <p><a href="tel:{{ telephone }}" target="_blank">{{ telephone }}</a></p>
-                <p><a href="{{ whatsapp }}" target="_blank">Whatsapp</a></p>
-                <p><a href="mailto:{{ email }}" target="_blank">{{ email }}</a></p>
-                <p><a href="{{ linkedin }}" target="_blank">LinkedIn</a></p>
-                <p><a href="{{ malt }}" target="_blank">Malt</a></p>
-                <p><a href="{{ github }}" target="_blank">GitHub</a></p>
+                <p><a href="tel:{{ telephone }}"><i class="fas fa-phone"></i>{{ telephone }}</a></p>
+                <p><a href="{{ whatsapp }}" target="_blank"><i class="fab fa-whatsapp"></i>{{ whatsapp }}</a></p>
+                <p><a href="mailto:{{ email }}"><i class="fas fa-envelope"></i> {{ email }}</a></p>
+                <p><a href="{{ linkedin }}" target="_blank"><i class="fab fa-linkedin"></i>{{ linkedinStripped }}</a>
+                </p>
+                <p><a href="{{ malt }}" target="_blank">{{> malt }}{{ maltStripped }}</a></p>
+                <p><a href="{{ github }}" target="_blank"><i class="fab fa-github"></i>{{ github }}</a></p>
             </section>
 
             <section class="cv-summary">

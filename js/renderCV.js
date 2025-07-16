@@ -6,14 +6,22 @@ export const renderCVWithData = async (templateName, data) => {
         const template = await loadTemplate(`./templates/${templateName}.html`);
         loadStylesheet(templateName);
 
+        const partials = {
+            malt: await loadTemplate(`./templates/partials/icons/malt.mustache`)
+        };
+
+        const stripPrefix = (url) => url.replace(/^https?:\/\/(www\.)?/, '');
+
         const output = Mustache.render(template, {
             ...data.basics,
+            linkedinStripped: stripPrefix(data.basics.linkedin),
+            maltStripped: stripPrefix(data.basics.malt),
             skills: data.skills,
             work: data.work,
             education: data.education,
             languages: data.languages,
             additional: data.additional
-        });
+        }, partials);
 
         document.getElementById('cv-container').innerHTML = output;
     } catch (error) {
