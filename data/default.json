@@ -2,12 +2,22 @@
     "basics": {
         "firstname": "Romain",
         "lastname": "Félicianne",
-        "label": "Développeur Web & Concepteur Rédacteur Freelance",
-        "location": "Jardin, Medellín (Colombie) | Guadeloupe | France",
+        "label": "Développeur Web & Expert Frontend - Freelance",
+        "location": "Jardín, Medellín (Colombie) | Guadeloupe | Canada | France",
+        "telephone": "+57 311 303 22 67",
+        "whatsapp": "https://wa.me/33682378554",
         "email": "romain-felicianne@hotmail.fr",
         "linkedin": "https://www.linkedin.com/in/felicianne-romain",
+        "malt": "https://www.malt.fr/profile/romainfelicianne",
+        "github": "https://github.com/AnhPati",
         "website": "",
-        "summary": "Je conçois et développe des interfaces web robustes, lisibles et bien structurées. Spécialisé en React (TypeScript, TanStack Query), j'interviens aussi sur WordPress, Python (Streamlit), Moodle, etc."
+        "summary": {
+            "about": "Développeur web spécilisé en front-end. Agnostique, je maitrise particulièrement ReactJS (TypeScript) et Streamlit (Python). J'ai pu intervenir sur des projets web variés : applications métiers, plateformes e-learning, sites vitrine.",
+            "quote": {
+                "sentence": "“Clean code always looks like it was written by someone who cares.”",
+                "author": "Robert C. Martin (Uncle Bob)"
+            }
+        }
     },
     "languages": [
         {
@@ -36,17 +46,21 @@
                 "TanStack Query",
                 "HTML5",
                 "CSS3",
-                "Tailwind",
                 "SCSS",
+                "Tailwind",
+                "Bulma",
+                "Radix UI",
                 "ShadCN"
             ]
         },
         {
-            "group": "Backoffice / Visualisation",
+            "group": "Visualisation & Outils",
             "keywords": [
                 "Streamlit",
                 "Shiny",
-                "Python"
+                "Python",
+                "Django",
+                "Firebase"
             ]
         },
         {
@@ -54,8 +68,23 @@
             "keywords": [
                 "WordPress",
                 "Moodle",
+                "OpenEdX",
+                "Shopify",
+                "Liquid",
                 "Rédaction SEO",
-                "Newsletter"
+                "UX Wording",
+                "Newsletter",
+                "Audit SEO"
+            ]
+        },
+        {
+            "group": "Autres",
+            "keywords": [
+                "Git",
+                "Méthodes agiles",
+                "Gestion de projet",
+                "Mentorat",
+                "Code Review"
             ]
         }
     ],
@@ -65,35 +94,49 @@
             "position": "Développeur Web & Concepteur Rédacteur",
             "startDate": "2016-04",
             "endDate": "Present",
-            "summary": "Conception, intégration et développement d'interfaces web sur mesure. +20 missions de développement, +10 missions de wording et contenu."
+            "summary": "+20 missions de développement web (React, Python, CMS), +10 missions de wording & SEO. Interfaces robustes et outils sur mesure."
         },
         {
             "company": "Coding Accelerator",
             "position": "Mentor Technique",
             "startDate": "2024-01",
             "endDate": "Present",
-            "summary": "Accompagnement de développeurs en reconversion. Correction, validation, mentorat jusqu'à la première mission freelance."
+            "summary": "Correction d'épreuves algo, mentorat, validation technique et accompagnement vers la première mission freelance."
         },
         {
             "company": "Le Chemin de la Nature",
             "position": "Développeur Front-End",
             "startDate": "2019-01",
             "endDate": "Present",
-            "summary": "Maintenance de la plateforme e-learning. Intégration WordPress/Moodle, CSS/JS, contenus pédagogiques."
+            "summary": "Intégration continue (Moodle, WordPress), dev spécifique, amélioration UX, maintenance, agile."
         },
         {
             "company": "SANE STANDARD",
             "position": "Développeur WordPress",
             "startDate": "2022-06",
             "endDate": "2022-09",
-            "summary": "Site vitrine sur mesure : charte graphique, personnalisation, intégration."
+            "summary": "Site vitrine : charte graphique, thème, intégration, personnalisation."
         },
         {
             "company": "Alliance Française Paris",
             "position": "Développeur Intégrateur",
             "startDate": "2018-12",
             "endDate": "2019-12",
-            "summary": "MOOCs sur FUN-MOOC. Stack HTML/CSS/OpenEdX, adaptation pédagogique."
+            "summary": "MOOCs FUN-MOOC, OpenEdX, HTML/CSS, adaptation pédagogique."
+        },
+        {
+            "company": "Alfie",
+            "position": "Développeur Shopify",
+            "startDate": "2019-07",
+            "endDate": "2019-07",
+            "summary": "Intégration CSS & Liquid sur boutique Shopify."
+        },
+        {
+            "company": "Swapp",
+            "position": "Développeur Front-End",
+            "startDate": "2018-09",
+            "endDate": "2018-10",
+            "summary": "Intégration Django + BEM, CSS/HTML/JS, Bootstrap."
         }
     ],
     "education": [
@@ -102,29 +145,32 @@
             "area": "Développement Web Junior",
             "startDate": "2017-12",
             "endDate": "2018-09",
-            "summary": "Formation axée front-end, projets encadrés, compétences : HTML, CSS, JS, PHP, Git, SEO."
+            "summary": "Formation diplômante axée front-end : HTML5, CSS3, JS, Git, SEO, projets terrain."
         },
         {
             "institution": "Autodidacte",
             "area": "Formation continue",
             "startDate": "2016-12",
-            "summary": "ReactJS, TypeScript, Streamlit, Shiny, Firebase, NextJS, etc."
+            "summary": "ReactJS, TypeScript, Python, Firebase, NextJS, CMS, Shiny, veille techno et projets persos."
         },
         {
             "institution": "ATLA",
             "area": "Management Artistique et Culturel",
             "startDate": "2015-12",
             "endDate": "2016-03",
-            "summary": "Gestion de projets culturels, communication, budgétisation, accompagnement."
+            "summary": "Projet culturel, communication, budget, accompagnement."
         }
     ],
     "additional": {
         "interests": [
             "UX design",
-            "pédagogie",
-            "projets culturels",
-            "mentorat"
+            "Pédagogie",
+            "Projets culturels",
+            "Mentorat",
+            "Musique",
+            "Voile",
+            "Basketball"
         ],
-        "lifestyle": "Travail à distance depuis la Colombie, la Guadeloupe ou ailleurs. Autonomie, rigueur et approche humaine."
+        "lifestyle": "Après une transat à la voile et un virage vers le code, je vis aujourd’hui entre Jardín (Antioquia), la Guadeloupe et le Canada. Je développe, j’enseigne et j’apprends, encore et toujours."
     }
 }
