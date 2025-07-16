@@ -1,59 +1,15 @@
 @media print {
 
-    /* Masquer les contrôles et éléments inutiles à l'impression */
+    /* ----------------------------
+       GÉNÉRALITÉS & RESET
+    ---------------------------- */
     #controls,
     .no-print {
         display: none !important;
     }
 
-    /* Empêcher la coupure à l’intérieur de ces blocs */
-    .job,
-    .edu,
-    .skill-group,
-    .languages,
-    .cv-summary,
-    .cv-contact,
-    .cv-location,
-    .cv-title,
-    .skills,
-    .additional,
-    .cv-aside,
-    .cv-main {
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-
-    /* Ajoute un espacement pour éviter que les blocs soient collés en haut de page */
-    .languages,
-    .cv-summary,
-    .cv-contact,
-    .skills,
-    .additional,
-    .padding-top-print {
-        padding-top: 1rem !important;
-    }
-
-    /* Forcer un saut de page avant éducation dans le template classic */
-    #classic .education {
-        break-before: page;
-        page-break-before: always;
-    }
-
-    /* Utilisé pour forcer un remplissage de fond dans l'aside */
-    .print-filler {
-        height: 1000px;
-        content: '';
-        display: block;
-    }
-
-    .cv-summary,
-    .cv-main {
-        break-before: avoid;
-        page-break-before: avoid;
-    }
-
     @page {
-        margin: 1.5cm;
+        margin: 1.2cm;
     }
 
     html,
@@ -61,6 +17,196 @@
         margin: 0;
         padding: 0;
         width: 100%;
-        height: auto;
+        font-size: 10pt;
+        line-height: 1.25;
+        color: #000;
+    }
+
+    /* ----------------------------
+       EN-TÊTE (HEADER)
+    ---------------------------- */
+    .cv-header {
+        padding: 1rem 1.2rem 0.8rem;
+        background: #112746;
+        color: white;
+        text-align: center;
+    }
+
+    .cv-header h1 {
+        font-size: 1.5rem;
+        margin: 0 0 0.3rem 0;
+    }
+
+    .cv-title {
+        font-size: 1rem;
+        margin: 0.2rem 0;
+        font-weight: 400;
+    }
+
+    .cv-location {
+        font-size: 0.9rem;
+        color: #cce4ff;
+        margin: 0.2rem 0 0;
+    }
+
+    /* ----------------------------
+       CONTENU PRINCIPAL
+    ---------------------------- */
+    .cv-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cv-aside,
+    .cv-main {
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .cv-aside {
+        width: 30%;
+        background: #e0f2fe;
+    }
+
+    .cv-main {
+        width: 70%;
+    }
+
+    /* ----------------------------
+       TYPOGRAPHIE GÉNÉRALE
+    ---------------------------- */
+    h2 {
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.4rem;
+        border-bottom: 1px solid #aaa;
+        padding-bottom: 0.2rem;
+    }
+
+    h3 {
+        font-size: 0.95rem;
+        margin: 0.6rem 0 0.3rem;
+    }
+
+    p,
+    li {
+        font-size: 0.9rem;
+        margin: 0.2rem 0;
+    }
+
+    ul {
+        padding-left: 1.1rem;
+        margin: 0.4rem 0;
+    }
+
+    /* ----------------------------
+       BLOCS DÉTAILLÉS
+    ---------------------------- */
+    .job,
+    .edu,
+    .skill-group {
+        margin-bottom: 1rem;
+    }
+
+    .cv-main .desc {
+        margin-top: 0.2rem;
+    }
+
+    .cv-main .dates {
+        font-size: 0.85rem;
+        color: #444;
+        font-style: italic;
+        margin: 0.1rem 0 0.2rem;
+    }
+
+    /* ----------------------------
+       COMPÉTENCES : Nuage limité
+    ---------------------------- */
+    .skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        list-style: none;
+        margin: 0.4rem 0;
+        padding: 0;
+    }
+
+    .skills li {
+        background-color: #cce4ff;
+        color: #112746;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.3rem;
+        font-size: 0.85rem;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .skills .skill-group ul li:nth-of-type(n+4) {
+        display: none;
+    }
+
+    /* ----------------------------
+       SECTION "AUTRES"
+    ---------------------------- */
+    .additional p {
+        font-style: italic;
+        font-weight: 300;
+        display: -webkit-box;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .additional p::before {
+        content: "... to be continued.";
+        background: #e0f2fe;
+        position: absolute;
+        bottom: -0.05rem;
+        right: 0rem;
+        border: 1px solid #f29300;
+        color: #f29300;
+        font-style: normal;
+        font-size: 0.7rem;
+        font-weight: bold;
+        padding: 0.2rem 0.6rem;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        white-space: nowrap;
+    }
+
+    .additional ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        list-style: none;
+        margin-top: 0.6rem;
+        padding: 0;
+    }
+
+    .additional li {
+        background-color: #cce4ff;
+        color: #112746;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.3rem;
+        font-size: 0.85rem;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .additional li:nth-of-type(n+6) {
+        display: none;
+    }
+
+    /* ----------------------------
+       ANTI-COUPURES
+    ---------------------------- */
+    .job,
+    .edu,
+    .skill-group,
+    .cv-aside section,
+    .cv-main section {
+        page-break-inside: avoid;
     }
 }
