@@ -195,7 +195,7 @@
         white-space: nowrap;
     }
 
-    .additional li:nth-of-type(n+6) {
+    .additional li:nth-of-type(n+4) {
         display: none;
     }
 
